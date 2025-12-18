@@ -20,17 +20,12 @@ public class LoadShip extends ShipBase {
 
     @Override
     protected Container moveOne(PortStorage storage) throws Exception {
-        Container c = storage.tryTake();
+        Container c = storage.take();
         if (c == null) {
             return null;
         }
 
         containers.addLast(c);
         return c;
-    }
-
-    @Override
-    protected boolean canEnterPort(PortStorage storage) {
-        return storage.size() > 0;
     }
 }
