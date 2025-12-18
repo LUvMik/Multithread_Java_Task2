@@ -7,10 +7,6 @@ public class Container {
         this.id = id;
     }
 
-    public long id() {
-        return id;
-    }
-
     @Override
     public String toString() {
         return "C" + id;
